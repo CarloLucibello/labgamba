@@ -1,0 +1,440 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15239,        431]
+NotebookOptionsPosition[     14670,        406]
+NotebookOutlinePosition[     15005,        421]
+CellTagsIndexPosition[     14962,        418]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6985913490002117`*^9, 3.698591371161447*^9}, {
+  3.698591414122851*^9, 3.698591416477435*^9}, {3.698909263893571*^9, 
+  3.6989092651286783`*^9}}],
+
+Cell[BoxData["\<\"/home/carlo/Documenti/Didattica/2016-17 Fisica 1/Corso di \
+Gamba\"\>"], "Output",
+ CellChangeTimes->{
+  3.698591358658848*^9, {3.698591416693355*^9, 3.698591433040694*^9}, 
+   3.69873617253076*^9, 3.698909265587263*^9, 3.698911068258823*^9, 
+   3.69891119066121*^9, {3.6989124970279408`*^9, 3.698912512322063*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"file", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", "\"\<studenti_gamba.csv\>\"", "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"2", ";;"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"file", ",", 
+    RowBox[{"{", 
+     RowBox[{"234912", ",", " ", "\"\<SICA\>\"", ",", "\"\<LORENZO\>\""}], 
+     "}"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"file", ",", 
+    RowBox[{"{", 
+     RowBox[{"230341", ",", " ", "\"\<SIGGIA\>\"", ",", "\"\<ROBERTO\>\""}], 
+     "}"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"file", ",", 
+     RowBox[{"{", 
+      RowBox[{"234137", ",", " ", "\"\<SPATARO\>\"", ",", "\"\<ORAZIO\>\""}], 
+      "}"}]}], "]"}], " ", ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"aggiunti", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Giulia\>\"", ",", "\"\<Tortoioli\>\"", ",", "\"\<235375\>\""}], 
+       "}"}], " ", ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Fabio\>\"", ",", "\"\<Spina\>\"", ",", "\"\<0000\>\""}], 
+       "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Edoardo\>\"", ",", "\"\<Spinardi\>\"", ",", "\"\<240115\>\""}], 
+       "}"}], " ", ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Ruben\>\"", ",", "\"\<Tavano\>\"", ",", "\"\<234867\>\""}], "}"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Giorgio\>\"", ",", "\"\<Spadaro\>\"", ",", "\"\<237812\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Stefania\>\"", ",", "\"\<Tagliafierro\>\"", ",", 
+        "\"\<238891\>\""}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Mario\>\"", ",", "\"\<Sibilla\>\"", ",", "\"\<237745\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Giorgia\>\"", ",", "\"\<Soravito\>\"", ",", "\"\<236948\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Paolo\>\"", ",", "\"\<Tomasello\>\"", ",", "\"\<239265\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Valentina\>\"", ",", "\"\<Temporale\>\"", ",", "\"\<236653\>\""}],
+        "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Alessio\>\"", ",", "\"\<Soru\>\"", ",", "\"\<235059\>\""}], "}"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Bouchra\>\"", ",", "\"\<Solaih\>\"", ",", "\"\<237516\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Vincenzo\>\"", ",", "\"\<Sparacino\>\"", ",", "\"\<234580\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Andrea Maria\>\"", ",", "\"\<Spina\>\"", ",", "\"\<234979\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Chiara\>\"", ",", "\"\<Tomei\>\"", ",", "\"\<235085\>\""}], "}"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Luca\>\"", ",", "\"\<Testa\>\"", ",", "\"\<234737\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Francesco\>\"", ",", "\"\<Tardito\>\"", ",", "\"\<237276\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Elena\>\"", ",", "\"\<Tiotto\>\"", ",", "\"\<234678\>\""}], "}"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Alberto\>\"", ",", "\"\<Taverna\>\"", ",", "\"\<239403\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Alberto\>\"", ",", "\"\<Spessa\>\"", ",", "\"\<235647\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Leonardo\>\"", ",", "\"\<Tolla\>\"", ",", "\"\<237081\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Jacopo\>\"", ",", "\"\<Taramasso\>\"", ",", "\"\<235275\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Michele\>\"", ",", "\"\<Signorile\>\"", ",", "\"\<233779\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Sara\>\"", ",", "\"\<Solito\>\"", ",", "\"\<236510\>\""}],
+        "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Niccolo\>\"", ",", "\"\<Tortarolo\>\"", ",", "\"\<235791\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Nicola\>\"", ",", "\"\<Sturli\>\"", ",", "\"\<236288\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Gabriele\>\"", ",", "\"\<Tealdi\>\"", ",", "\"\<234406\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Riccardo\>\"", ",", "\"\<Simonitti\>\"", ",", "\"\<237969\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Marianna\>\"", ",", "\"\<Stragiotti\>\"", ",", "\"\<234613\>\""}],
+        "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Mariapia\>\"", ",", "\"\<Summa\>\"", ",", "\"\<237262\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Basilio\>\"", ",", "\"\<Spinello\>\"", ",", "\"\<238231\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Antonio\>\"", ",", "\"\<Somma\>\"", ",", "\"\<235682\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Claudiu Adrian \>\"", ",", "\"\<Solomon\>\"", ",", 
+        "\"\<236655\>\""}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Marius Iulian\>\"", ",", "\"\<Tamas\>\"", ",", "\"\<236359\>\""}],
+        "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Fernando Soto \>\"", ",", "\"\<Cruz\>\"", ",", "\"\<242015\>\""}],
+        "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Pietro Giuseppe\>\"", ",", "\"\<Stra\>\"", ",", 
+        "\"\<237039\>\""}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Kim Jierly\>\"", ",", "\"\<Susa\>\"", ",", "\"\<238351\>\""}], 
+       "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"AppendTo", "[", 
+     RowBox[{"file", ",", 
+      RowBox[{"Reverse", "[", "p", "]"}]}], "]"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"p", ",", "aggiunti"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sorted", "=", 
+   RowBox[{"Sort", "[", 
+    RowBox[{"file", ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Order", "[", 
+         RowBox[{
+          RowBox[{"#1", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", 
+          RowBox[{"#2", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "]"}], ">", " ", "0"}], ")"}], 
+      "&"}]}], "]"}]}], " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Tally", "[", "sorted", "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Part", "[", 
+        RowBox[{"#", ",", "2"}], "]"}], ">", "1"}], "&"}]}], "]"}], " ", 
+   "\[Equal]", " ", 
+   RowBox[{"{", "}"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"n", "=", 
+  RowBox[{"Length", "[", "sorted", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<iscritti_labgamba.txt\>\"", ",", "sorted", ",", "\"\<CSV\>\""}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.698587301159882*^9, 3.698587302175563*^9}, {
+   3.69858735169666*^9, 3.698587393011096*^9}, {3.698587835119416*^9, 
+   3.698587839525854*^9}, {3.698589722634714*^9, 3.698589762182846*^9}, {
+   3.698589797087186*^9, 3.698589837975499*^9}, {3.698589868077662*^9, 
+   3.698589948378539*^9}, {3.698590040061988*^9, 3.698590065867011*^9}, {
+   3.69859009630335*^9, 3.698590207035963*^9}, {3.698590254237701*^9, 
+   3.698590296427985*^9}, {3.6985914266994267`*^9, 3.698591451296008*^9}, {
+   3.698906883768014*^9, 3.6989068852127037`*^9}, {3.698906917273181*^9, 
+   3.6989070844904203`*^9}, {3.698907140004492*^9, 3.698907168031691*^9}, {
+   3.698907233050172*^9, 3.6989073214307413`*^9}, {3.698907354746228*^9, 
+   3.698907621987825*^9}, {3.698908271627488*^9, 3.698908307108193*^9}, {
+   3.698908346216559*^9, 3.6989083542186947`*^9}, {3.698908541697871*^9, 
+   3.698908609385936*^9}, {3.698909204355487*^9, 3.69890925502501*^9}, {
+   3.698909327544306*^9, 3.69890932775695*^9}, {3.698911023799498*^9, 
+   3.6989110512016563`*^9}, 3.698911575951498*^9, 3.698911644472884*^9, 
+   3.6989125097890043`*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.6989086149820004`*^9, 3.6989092056219997`*^9, {3.69890924460844*^9, 
+   3.698909267477643*^9}, 3.6989093281119537`*^9, 3.698911068494053*^9, 
+   3.6989111908057423`*^9, 3.698911649874818*^9, {3.698912497862648*^9, 
+   3.698912514316839*^9}}],
+
+Cell[BoxData["201"], "Output",
+ CellChangeTimes->{
+  3.6989086149820004`*^9, 3.6989092056219997`*^9, {3.69890924460844*^9, 
+   3.698909267477643*^9}, 3.6989093281119537`*^9, 3.698911068494053*^9, 
+   3.6989111908057423`*^9, 3.698911649874818*^9, {3.698912497862648*^9, 
+   3.698912514317625*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", "17", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", " ", "=", 
+   RowBox[{"Permute", "[", 
+    RowBox[{"sorted", ",", 
+     RowBox[{"RandomPermutation", "[", "n", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"espdata", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<21/03/2017\>\"", ",", "\"\<28/03/2017\>\"", ",", 
+      "\"\<4/04/2017\>\"", ",", "\"\<11/04/2017\>\"", ",", 
+      "\"\<2/05/2017\>\""}], "}"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"toprint", " ", "=", "  ", 
+   RowBox[{"{", 
+    RowBox[{"{", "\"\<SQUADRE DI LABORATORIO\>\"", "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nesp", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"toprint", "=", 
+      RowBox[{"Join", "[", 
+       RowBox[{"toprint", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<Esperienza Piano Inclinato \>\"", "<>", "esp", "<>", "  ", 
+            "\"\< del \>\"", "<>", 
+            RowBox[{"espdata", "[", 
+             RowBox[{"[", 
+              RowBox[{"nesp", "+", "1"}], "]"}], "]"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", "}"}]}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"i", "=", 
+         RowBox[{
+          RowBox[{"nesp", "*", "40"}], " ", "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"s", "-", "1"}], ")"}], "*", "4"}], "+", "1"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"toprint", "=", 
+         RowBox[{"Join", "[", 
+          RowBox[{"toprint", ",", 
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{"\"\<SQUADRA \>\"", "<>", 
+              RowBox[{"ToString", "[", "s", "]"}], " ", "<>", "esp"}], "}"}], 
+            "}"}], ",", 
+           RowBox[{"list", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ";;", " ", 
+              RowBox[{"i", "+", "3"}]}], "]"}], "]"}]}], "]"}]}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"s", ",", "10"}], "}"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     
+     RowBox[{"nesp", "+=", "1"}], ";"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"esp", ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<A\>\"", ",", "\"\<B\>\"", ",", "\"\<C\>\"", ",", "\"\<D\>\"", 
+        ",", "\"\<E\>\""}], "}"}]}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"toprint", "=", 
+    RowBox[{"Join", "[", 
+     RowBox[{"toprint", ",", 
+      RowBox[{"list", "[", 
+       RowBox[{"[", 
+        RowBox[{"201", ";;"}], "]"}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<squadrepiano_labgamba.txt\>\"", ",", "toprint", ",", "\"\<Table\>\""}],
+   "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.698909602283098*^9, 3.6989097299026327`*^9}, {
+   3.698909796396243*^9, 3.698909962255402*^9}, {3.698910028769452*^9, 
+   3.698910272846149*^9}, {3.698910334548254*^9, 3.6989103352047167`*^9}, {
+   3.6989103855741777`*^9, 3.698910386718768*^9}, {3.6989104244241123`*^9, 
+   3.698910427879731*^9}, {3.698910459051579*^9, 3.698910474961645*^9}, 
+   3.698910821397738*^9, {3.69891107710252*^9, 3.6989111085755587`*^9}, {
+   3.6989111977771397`*^9, 3.698911303260561*^9}, {3.698911337953228*^9, 
+   3.698911398145885*^9}, {3.698911466726397*^9, 3.698911469784066*^9}, {
+   3.698911936201618*^9, 3.6989120850066147`*^9}, {3.698912279473166*^9, 
+   3.6989123006624203`*^9}, {3.698912529466249*^9, 3.6989125347217627`*^9}}],
+
+Cell[BoxData["\<\"squadrepiano_labgamba.txt\"\>"], "Output",
+ CellChangeTimes->{
+  3.6989113035844097`*^9, {3.69891139478439*^9, 3.698911399298335*^9}, 
+   3.698911470033416*^9, 3.6989115964119387`*^9, {3.698912070617572*^9, 
+   3.6989120853922443`*^9}, {3.698912280119638*^9, 3.698912303492009*^9}, {
+   3.6989124988958483`*^9, 3.698912535648435*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{496, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 291, 6, 32, "Input"],
+Cell[874, 30, 333, 5, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1244, 40, 8471, 237, 759, "Input"],
+Cell[9718, 279, 297, 5, 32, "Output"],
+Cell[10018, 286, 296, 5, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10351, 296, 3948, 100, 539, "Input"],
+Cell[14302, 398, 352, 5, 89, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
