@@ -11,7 +11,7 @@ La cosa migliore da fare è da jupyter fare esporta in pdf (Latex), che però no
 vede li immagini incorporate nel markdown. Quindi le immagini le ho messe in
 un file unico immagini.pdf creato con Inkscape e le ho stampate a parte
 
-TODO
+## TODO
 - prendere firme studenti: stampare divisione gruppi
 - stampare cella 1 notebook
 - prendere firme assistenti
@@ -27,6 +27,5 @@ TODO
 glielo puoi dire tu? "per motivi di carattere statistico che qui non vi posso spiegare"... ma se volete leggete il Loreti
 e analogamente nell'espressione per sigma_y c'è 1/(n-2)
 
-- Spallone Fabiana <-> Torlini Matia    21/3 - 11/4 OK
-- Anna Teodori - Alberto Taverna 21/3 - 28/3
-- Sudano - Sorrentino         21/3 - 11/4 
+## GRUPPI A CUI HO PASSATO DATI PULITI
+9A, 1B, 5B, 9B, 10C
